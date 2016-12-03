@@ -13,4 +13,10 @@ services:
       - "3000:3000"
     depends_on:
       - db
-
+    volumes_from:
+      - bundle
+  bundle:
+    image: busybox
+    command: echo data container for bundle
+    volumes:
+      - /bundle

@@ -35,6 +35,9 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails', '~> 3.5'
   gem 'factory_girl_rails', '~> 4.7'
+  gem 'pry'
+  gem 'rubocop', '~> 0.46.0', require: false
+  gem 'rails_best_practices', require: false
 end
 
 group :development do
