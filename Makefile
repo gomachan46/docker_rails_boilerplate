@@ -1,3 +1,4 @@
+.PHONY: init build up console/web console/db test db/create db/drop db/migrate db/reset
 init: build db/reset
 build:
 	docker-compose build
