@@ -2,7 +2,9 @@
 init: build db/reset
 build:
 	docker-compose build
-up:
+install:
+	docker-compose run web bundle install
+up: db/migrate
 	docker-compose up
 console/web:
 	docker-compose run web rails c
