@@ -1,21 +1,21 @@
 .PHONY: init build up console/web console/db test db/create db/drop db/migrate db/reset
 
 init:
+	docker-compose down
 	docker-compose rm
-
 setup: build gem/install db/reset
+reset: init setup
 
 build:
 	docker-compose build
+up:
+	docker-compose up
 
 gem/install:
 	docker-compose run web bundle install
 gem/reset:
 	docker-compose rm bundle
 	$(MAKE) gem/install
-
-up: db/migrate
-	docker-compose up
 
 console/web:
 	docker-compose run web bundle exec rails c
