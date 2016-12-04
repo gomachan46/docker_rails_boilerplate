@@ -1,4 +1,4 @@
-.PHONY: init build up console/web console/db test db/create db/drop db/migrate db/reset
+.PHONY: init setup reset build up gem/install gem/reset console/web console/db test db/create db/drop db/migrate db/reset
 
 init:
 	docker-compose down
@@ -33,3 +33,4 @@ db/migrate:
 	docker-compose run web bundle exec rake db:migrate
 db/reset:
 	docker-compose run web bundle exec rake db:reset
+
