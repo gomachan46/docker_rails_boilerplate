@@ -1,4 +1,7 @@
-.PHONY: init setup reset build up gem/install gem/reset console/web console/db test db/create db/drop db/migrate db/reset
+.PHONY: help init setup reset build up gem/install gem/reset console/web console/db test db/create db/drop db/migrate db/reset
+
+help:
+	cat ./Makefile
 
 init:
 	docker-compose down
