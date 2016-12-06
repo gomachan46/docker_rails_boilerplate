@@ -2,6 +2,10 @@
 
 Ruby on Rails 5 works on Docker for development.
 
+# requirements
+
+* docker-compose
+
 # how to use
 
 ```
