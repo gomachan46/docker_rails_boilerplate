@@ -36,4 +36,3 @@ db/migrate:
 	docker-compose run web bundle exec rake db:migrate
 db/reset:
 	docker-compose run web bundle exec rake db:reset
-
